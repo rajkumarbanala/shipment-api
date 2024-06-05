@@ -1,13 +1,28 @@
 # ShipmentApi
 
-How to start the ShipmentApi application
----
+### Pre-requisites
 
-1. Run `mvn clean install` to build your application
-1. Start application with `java -jar target/shipment-api-1.0-SNAPSHOT.jar server config.yml`
-1. To check that your application is running enter url `http://localhost:8080`
+MYSQL database: Update the main.yml if your configuration differs. In this example, we use
 
-Health Check
----
+	database: test_shipment
+	user: root
+	pass: root
 
-To see your applications health enter url `http://localhost:8081/healthcheck`
+### Build:
+
+	mvn clean package
+	
+
+### Database creation:
+
+	java -jar target/shipment-api-1.0-SNAPSHOT.jar db migrate config.yml
+	
+	
+### Run:
+
+	java -jar target/shipment-api-1.0-SNAPSHOT.jar server config.yml
+	
+	
+### Open browser pointing at
+
+	http://localhost:9002
