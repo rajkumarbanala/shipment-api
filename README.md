@@ -2,7 +2,7 @@
 
 ### Pre-requisites
 
-MYSQL database: Update the main.yml if your configuration differs. In this example, we use
+MYSQL database: Update the config.yml if your configuration differs. In this example, we use
 
 	database: test_shipment
 	user: root
