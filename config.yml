@@ -1,0 +1,31 @@
+# Logging
+logging:
+  level: INFO
+  loggers:
+    com.example.demo: DEBUG
+
+# App Config
+server:
+  applicationConnectors:
+    - type: http
+      port: 9002
+  adminConnectors:
+    - type: http
+      port: 9003
+  rootPath: /api/      
+
+# Db Config
+database:
+    driverClass: com.mysql.jdbc.Driver
+    user: root
+    password: root
+    url: jdbc:mysql://localhost:3306/test_shipment
+    # the SQL query to run when validating a connection's liveness
+    validationQuery: "/* MyService Health Check */ SELECT 1"
+    validationQueryTimeout: 3s
+    maxWaitForConnection: 1s
+    minSize: 8
+    maxSize: 32
+    checkConnectionWhileIdle: false
+    evictionInterval: 10s
+    minIdleTime: 1 minute
