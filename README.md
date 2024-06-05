@@ -26,3 +26,7 @@ MYSQL database: Update the config.yml if your configuration differs. In this exa
 ### Open browser pointing at
 
 	http://localhost:9002
+
+### Postman collection API's
+
+Import file **shipment-api.postman_collection.json** into postman
